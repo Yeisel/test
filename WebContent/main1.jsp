@@ -49,8 +49,23 @@
 			</div>
 			<div style = "margin-top:10px">
 				<div id="left_div" style = "width:200px; min-height: 300px; overflow:hidden; background:green; float:left; margin-right:10px">
-					<img src="/prjDivTest/icons/android-contact.png" width="18" height="18"/> <input type="text" name="userId" value="ID 입력" style="width:100"/>
-					<img src="/prjDivTest/icons/android-checkmark.png" width="18" height="18"/> <input type="text" name="userPw" value="Password 입력" style="width:100"/>
+<%          
+			if(session.getAttribute("logged") == null){
+%>					
+					<form method="post" action="login.jsp">
+						<img src="/prjDivTest/icons/android-contact.png" width="18" height="18"/> <input type="text" name="userId" value="ID 입력" style="width:100"/>
+						<img src="/prjDivTest/icons/android-checkmark.png" width="18" height="18"/> <input type="text" name="userPw" value="Password 입력" style="width:100"/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="로그인"/>
+					</form>					
+<%			
+			}
+			else{
+%>
+					<img src="/prjDivTest/icons/android-contact.png" width="18" height="18"/><br/>
+					<%=session.getAttribute("logged")%> 님 방가!!
+<%
+			}
+%>
 				</div>
 				<div id="right_div" style = "width:790px; min-height: 300px; overflow:auto; background:#00CC00; float:left">
 					<c:if test="${param.page_num == null}">
