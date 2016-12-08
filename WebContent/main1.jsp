@@ -27,16 +27,31 @@
 </head>
 <body>
 <div style = "margin:auto; width:1000px">
-			<div id="top_div" style = "background:skyblue; height:200px">
-				<h2>Main Menu</h2>
-				<a href="javascript:fnPageMove('page1.jsp')">Page1</a>&nbsp;&nbsp;
-				<a href="javascript:fnPageMove('page2.jsp')">Page2</a>&nbsp;&nbsp;
-				<a href="javascript:fnPageMove('page3.jsp')">Page3</a>&nbsp;&nbsp;
-				<a href="javascript:fnPageMove('page4.jsp')">Page4</a>&nbsp;&nbsp;
-				<a href="javascript:fnPageMove('page5.jsp')">Page5</a>&nbsp;&nbsp;
+
+			<div id="top_div" style = "background:skyblue; height:150px">
+				<a href="main1.jsp"><img src="/prjDivTest/images/quizbook.png" width="1000" height="150"/></a>			
+			</div>
+			
+			<div style = "height:60px; float:bottom">
+					&nbsp;&nbsp;&nbsp;&nbsp;<img src="/prjDivTest/icons/android-drawer.png" width="60" height="60"/>&nbsp;&nbsp;
+					<a href="javascript:fnPageMove('page1.jsp')"><img src="/prjDivTest/icons/android-lightbulb.png" width="60" height="60"/></a>&nbsp;&nbsp;&nbsp;
+					<a href="javascript:fnPageMove('page2.jsp')"><img src="/prjDivTest/icons/bonfire.png" width="45" height="45"/></a>&nbsp;&nbsp;&nbsp;
+					<a href="javascript:fnPageMove('page3.jsp')"><img src="/prjDivTest/icons/ios7-americanfootball.png" width="45" height="45"/></a>&nbsp;&nbsp;&nbsp;
+					<a href="javascript:fnPageMove('page4.jsp')"><img src="/prjDivTest/icons/social-freebsd-devil.png" width="45" height="45"/></a>&nbsp;&nbsp;&nbsp;
+					<a href="javascript:fnPageMove('page5.jsp')"><img src="/prjDivTest/icons/ios7-paper.png" width="45" height="45"/></a>&nbsp;&nbsp;&nbsp;
+					<img src="/prjDivTest/icons/android-drawer.png" width="60" height="60"/>&nbsp;&nbsp;
+					<a href="javascript:fnPageMove('page5.jsp')"><img src="/prjDivTest/icons/ios7-cart.png" width="60" height="60"/></a>&nbsp;&nbsp;
+					<img src="/prjDivTest/icons/android-drawer.png" width="60" height="60"/>&nbsp;&nbsp;
+					<a href="javascript:fnPageMove('page5.jsp')"><img src="/prjDivTest/icons/ios7-chatbubble.png" width="60" height="60"/></a>&nbsp;&nbsp;
+					<img src="/prjDivTest/icons/android-drawer.png" width="60" height="60"/>&nbsp;&nbsp;
+					<a href="javascript:fnPageMove('page5.jsp')"><img src="/prjDivTest/icons/bug.png" width="60" height="60"/></a>&nbsp;&nbsp;
+					<img src="/prjDivTest/icons/android-drawer.png" width="60" height="60"/>&nbsp;&nbsp;
 			</div>
 			<div style = "margin-top:10px">
-				<div id="left_div" style = "width:200px; min-height: 300px; overflow:hidden; background:gray; float:left; margin-right:10px">Left Side Menu</div>
+				<div id="left_div" style = "width:200px; min-height: 300px; overflow:hidden; background:green; float:left; margin-right:10px">
+					<img src="/prjDivTest/icons/android-contact.png" width="18" height="18"/> <input type="text" name="userId" value="ID 입력" style="width:100"/>
+					<img src="/prjDivTest/icons/android-checkmark.png" width="18" height="18"/> <input type="text" name="userPw" value="Password 입력" style="width:100"/>
+				</div>
 				<div id="right_div" style = "width:790px; min-height: 300px; overflow:auto; background:#00CC00; float:left">
 					<c:if test="${param.page_num == null}">
 						<jsp:include page="default1.jsp"/>
