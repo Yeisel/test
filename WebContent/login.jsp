@@ -16,8 +16,12 @@
 		session.setAttribute("logged", id);
 		response.sendRedirect("main1.jsp");
 	}
+	else if(guest.equals(request.getParameter("logout"))){
+		session.invalidate();
+		response.sendRedirect("main1.jsp");
+	}
 	else{
-		session.setAttribute("guest", guest);
+		session.invalidate();
 		response.sendRedirect("main1.jsp");
 	}
 %>
